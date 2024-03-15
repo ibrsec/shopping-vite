@@ -4,6 +4,7 @@ import {
   cardContainer,
   sendDetailstoModal,
   sendProductToCart,
+  oneProductLoading
 } from "./sendCardsToDom.js";
 import { createButtons } from "./createBtns.js";
 import { searchProducts } from "./search.js";
@@ -51,6 +52,7 @@ export const getAllDataApi = async () => {
       //see details and add to cart btns events
       cardContainer.addEventListener("click", (e) => {
         if (e.target.id == "see-details-btn") {
+          oneProductLoading();
           getOneProduct(e.target.getAttribute("data-card-id"));
         } else if (e.target.id == "addtocart-btn") {
           sendProductToCart(
@@ -83,5 +85,8 @@ export const getOneProduct = async (id) => {
     console.log(error);
   }
 };
+
+
+
 
 cartFieldEvent();
