@@ -109,8 +109,8 @@ export const sendProductToCart = (id, jsonData,cartItems) => {
     const cardTitles = document.querySelectorAll(" .offcanvas-body .card .card-title");
     const product = jsonData.filter((item) => item.id == id)[0];
     const { image, title, price } = product;
-  if(cartItems.length > 0){
-      if(cartItems.map(item => item.title).some(item=> item == title)){
+  if(productsInCart.length > 0){
+      if([...cardTitles].map(item => item.textContent).some(item=> item == title)){
           alert("Already added to the cart")
           return;
       }
@@ -145,9 +145,16 @@ export const sendProductToCart = (id, jsonData,cartItems) => {
       </div>
       `;
   
-    const cartCount = document.querySelector("#sepet");
-    const productCount = productsInCart.length + 1;
-    cartCount.textContent = productCount;
+      getCartItemsCount();
 
     cartItems.push(product);
   };
+
+  export const getCartItemsCount = () => {
+    const cartCount = document.querySelector("#sepet");
+    const productsInCart = document.querySelectorAll(".offcanvas-body .card");
+    if(productsInCart.length != 0){
+    }
+    const productCount = productsInCart.length ;
+    cartCount.textContent = productCount;
+  }

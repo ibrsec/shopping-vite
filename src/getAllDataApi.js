@@ -7,11 +7,14 @@ import {
 } from "./sendCardsToDom.js";
 import { createButtons } from "./createBtns.js";
 import { searchProducts } from "./search.js";
+import { cartFieldEvent, calculateProducts } from "./cartCalculations.js";
+import { saveData } from "./localstorage.js";
 
 const BASE_URL = "https://anthonyfs.pythonanywhere.com/api/products/";
-let cartItems = [];
-const cartField = document.querySelector("#offcanvasScrolling");
-
+export let cartItems = [];
+export const setCartItems = (array) => {
+    cartItems = array;
+}
 
 export const getAllDataApi = async () => {
   try {
@@ -56,7 +59,7 @@ export const getAllDataApi = async () => {
             cartItems
           );
         calculateProducts();
-
+        saveData();
           console.log(cartItems);
         }
       });
@@ -65,6 +68,8 @@ export const getAllDataApi = async () => {
     console.log(error);
   }
 };
+
+
 
 export const getOneProduct = async (id) => {
   try {
@@ -79,45 +84,4 @@ export const getOneProduct = async (id) => {
   }
 };
 
-cartField.addEventListener("click", (e) => {
-  if (e.target.classList.contains("fa-plus")) {
-    e.target.previousElementSibling.textContent++;
-    e.target.closest(".card-body").querySelector("#cart-item-quantity").textContent++;
-    calculateProducts();
-    
-  } else if (e.target.classList.contains("fa-minus")) {
-    if (e.target.nextElementSibling.textContent > 1) {
-      e.target.nextElementSibling.textContent--;
-      e.target.closest(".card-body").querySelector("#cart-item-quantity").textContent--;
-      calculateProducts();
-
-    }
-  } else if (e.target.id == "remove-btn") {
-    cartItems = cartItems.filter(
-      (item) =>
-        item.id != e.target.closest(".card").getAttribute("data-product-id")
-    );
-    e.target.closest(".card").remove();
-    console.log(cartItems);
-    calculateProducts();
-
-  }
-});
-
-
-const calculateProducts = () => {
-    const quantities = document.querySelectorAll("#cart-item-quantity");
-    const prices = document.querySelectorAll("#cart-item-price");
-    const totalPrices = [];
-    quantities.forEach((item,i,array) => {
-        const totalPrice = Number((Number(item.textContent) * Number(prices[i].textContent)).toFixed(2));
-        totalPrices.push(totalPrice);
-    })
-    console.log(totalPrices);
-    const totalPrice = totalPrices.reduce((sum,item) => sum + item, 0);
-    const totalPriceElement = document.querySelector("#total-price");
-    totalPriceElement.textContent = totalPrice.toFixed(2);
-
-    
-
-}
+cartFieldEvent();
