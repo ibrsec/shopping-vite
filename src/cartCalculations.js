@@ -51,7 +51,7 @@ export const calculateProducts = () => {
     console.log(totalPrices);
     const totalPrice = totalPrices.reduce((sum,item) => sum + item, 0);
     const totalPriceElement = document.querySelector("#total-price");
-    totalPriceElement.textContent = totalPrice.toFixed(2);
+    totalPriceElement.textContent = totalPrice.toFixed(2) + " $";
 
 
 }
