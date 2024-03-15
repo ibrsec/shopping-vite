@@ -102,6 +102,25 @@ export const sendDetailstoModal = ({title,image,description,price}) => {
     `
 
 }
+export const oneProductLoading = () => {
+    const modalTitle = document.getElementById("exampleModalLabel");
+    const modalBody = document.querySelector(".modal-body");
+    modalTitle.textContent = "Loading...";
+    modalBody.innerHTML = `
+    <div class="text-center">
+                <div class="spinner-border text-info" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-info mx-3" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-border text-info" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                </div>
+    `;
+  }
+
 
 export const sendProductToCart = (id, jsonData,cartItems) => {
     const cartContainer = document.querySelector(".offcanvas-body");
@@ -130,11 +149,14 @@ export const sendProductToCart = (id, jsonData,cartItems) => {
                       <h5 class="card-title">${title}</h5>
                       <div class="d-flex align-items-center gap-2" role="button">
                           <i
-                          class="fa-solid fa-minus border rounded-circle bg-danger text-white p-2"
+                          class="fa-solid fa-minus border rounded-circle  text-white p-2"
+                          style="background-color:var(--color-2)"
                           ></i
                           ><span class="fw-bold">1</span
                           ><i
-                          class="fa-solid fa-plus border bg-danger text-white rounded-circle p-2"
+                          class="fa-solid fa-plus border  text-white rounded-circle p-2"
+                          style="background-color:var(--color-2)"
+
                           ></i>
                       </div>
                       <p class="card-text">Total : <span id="cart-item-quantity">${1}</span> x <span id="cart-item-price">${price}</span> $</p>

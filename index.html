@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./public/assets/img/logo.png" type="image/x-icon">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,6 +18,69 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      :root{
+        --color-1:#955EDB;
+        --color-2:#DB5EC6;
+        --color-3:#BE5EDB;
+        --color-4:#6C5EDB;
+        --color-5:#DB5E7B;
+        --color-6:#DC00AE;
+        --color-7:#B995DB;
+      }
+      .btn-primary{
+        background-color: var(--color-1);
+        border:none;
+      }
+      .btn-primary:hover{
+        background-color: var(--color-2);
+      }
+      .btn-secondary{
+        background-color: var(--color-1);
+
+        border:none
+        
+      }
+      .btn-secondary:hover{
+        background-color: var(--color-5);
+      }
+      .btn-success{
+        background-color: var(--color-1);
+
+        border:none
+        
+      }
+      .btn-success:hover{
+        background-color: var(--color-3);
+      }
+      .btn-info{
+        background-color: var(--color-1);
+        color: #fff !important;
+
+        border:none
+        
+      }
+      .btn-info:hover{
+        background-color: var(--color-4);
+      }
+      .btn-warning{
+        background-color: var(--color-1);
+color: #fff !important;
+        border:none
+        
+      }
+      .btn-warning:hover{
+        background-color: var(--color-5);
+      }
+      .btn-danger{
+        background-color: var(--color-1);
+
+        border:none
+        
+      }
+      .btn-danger:hover{
+        background-color: var(--color-6);
+      }
+
       .line-clamp-2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -26,18 +90,18 @@
     </style>
     <title>Shopping</title>
   </head>
-  <body>
-    <nav class="navbar bg-body-tertiary fixed-top">
+  <body style="background-color: #DAC6E0 !important ;">
+    <nav class="navbar bg-body-tertiary fixed-top" style="background-color: var(--color-1) !important; box-shadow: 1px 1px 30px var(--color-1);">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img
-            src="./public/assets/img/Clarusway_Logo.png"
+            src="./public/assets/img/logo.png"
             alt="Logo"
             width="50"
             height="48"
             class="d-inline-block align-text-top"
           />
-          <span class="fw-bold"> Clarusway</span>
+          <span class="fw-bold ms-2" style="color:#fff"> Shopping</span>
         </a>
         <button
           type="button"
@@ -45,6 +109,7 @@
           data-bs-target="#offcanvasScrolling"
           aria-controls="offcanvasScrolling"
           class="btn btn-secondary position-relative"
+          style="background-color: var(--color-2) !important;"
         >
           Sepetim
           <span
@@ -129,7 +194,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
+                Loading...
               </h1>
               <button
                 type="button"
@@ -138,7 +203,17 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">...</div>
+            <div class="modal-body">
+              <div class="spinner-border text-info" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="spinner-border text-info mx-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="spinner-border text-info" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -171,7 +246,7 @@
       <!--!                             category title                              -->
       <!--! ----------------------------------------------------------------------- -->
       <h4 class="text-center mt-2">
-        Category: <span class="text-danger" id="category">ALL</span>
+        Category: <span class="text-danger" id="category" style="color:var(--color-2) !important">ALL</span>
       </h4>
       <!--+ ----------------------------------------------------------------------- -->
       <!--+                                products                                 -->
