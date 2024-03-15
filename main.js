@@ -1,4 +1,4 @@
-
+// import Swal from 'sweetalert2';
 
 import {getAllDataApi,getOneProduct,cartItems } from "./public/src/getAllDataApi.js";
 import {getData} from "./public/src/localstorage.js";
@@ -14,3 +14,4 @@ window.onload = () => {
   calculateProducts();
 
 }
+

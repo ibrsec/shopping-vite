@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 import { searchProducts } from "./search.js";
 
 
@@ -130,7 +132,8 @@ export const sendProductToCart = (id, jsonData,cartItems) => {
     const { image, title, price } = product;
   if(productsInCart.length > 0){
       if([...cardTitles].map(item => item.textContent).some(item=> item == title)){
-          alert("Already added to the cart")
+          Swal.fire("Already added to the cart!");
+
           return;
       }
   }
