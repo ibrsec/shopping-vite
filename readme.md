@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ibrsec/shopping-vite/">
-    <img src="./assest/img/logo.png" alt="Logo" width="200" >
+    <img src="./public/assets/img/logo.png" alt="Logo" width="200" >
   </a>
 
   <h3 align="center">Shopping Vite Project</h3>
