@@ -85,12 +85,12 @@
 
 ## 👀 Overview
 
-📦 POMOTODO App for tracking time and the tasks. </br>
-🎯 Adjustable Theme  </br>
-🌱 Add, Edit, Delete Tasks </br>
-💪 Track time and pomodoros for selected Task  </br>
-🔩 Get a random joke when you are tired   </br>
-🐞 Check the finished tasks   </br>
+📦 Project aims to create a Product List App. </br>
+🎯 Products are listed by their categories.  </br>
+🌱 Search feature is added filtered by categories</br>
+💪   </br>
+🔩 Shopping cart includes checkout feature   </br>
+<!-- 🐞 Check the finished tasks   </br> -->
 <!-- 🖥 Easy to implement multiple windows   -->
 
 
