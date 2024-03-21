@@ -88,8 +88,8 @@
 📦 Project aims to create a Product List App. </br>
 🎯 Products are listed by their categories.  </br>
 🌱 Search feature is added filtered by categories</br>
-<!-- 💪   </br> -->
 🔩 Shopping cart includes checkout feature   </br>
+<!-- 💪   </br> -->
 <!-- 🐞 Check the finished tasks   </br> -->
 <!-- 🖥 Easy to implement multiple windows   -->
 
