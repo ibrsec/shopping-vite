@@ -27,7 +27,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>📎 Table of Contents 📎 </summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
      <!-- <li><a href="#figma">Figma</a></li> -->
@@ -60,7 +60,7 @@
 ---
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## ℹ️ About The Project
 
 [![shopping-vite](./public/assets/img/project.gif)](https://ibrsec.github.io/shopping-vite/)
 
@@ -127,7 +127,7 @@ npm run dev || yarn start
 
 
 
-## Directory structure 
+## 📂 Directory structure 
 
 ```
 shopping-vite  (folder)
@@ -159,7 +159,7 @@ shopping-vite  (folder)
 
 ---
 
-### Built With
+### 🏗️ Built With
 
  
 <!-- https://dev.to/envoy_/150-badges-for-github-pnk  search skills-->
