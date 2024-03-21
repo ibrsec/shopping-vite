@@ -85,12 +85,12 @@
 
 ## 👀 Overview
 
-📦 POMOTODO App for tracking time and the tasks.
-🎯 Adjustable Theme 
-🌱 Add, Edit, Delete Tasks
-💪 Track time and pomodoros for selected Task 
-🔩 Get a random joke when you are tired  
-🐞 Check the finished tasks  
+📦 POMOTODO App for tracking time and the tasks. </br>
+🎯 Adjustable Theme  </br>
+🌱 Add, Edit, Delete Tasks </br>
+💪 Track time and pomodoros for selected Task  </br>
+🔩 Get a random joke when you are tired   </br>
+🐞 Check the finished tasks   </br>
 <!-- 🖥 Easy to implement multiple windows   -->
 
 
